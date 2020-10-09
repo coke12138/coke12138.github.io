@@ -5,17 +5,17 @@
   
 
   
-  <title>Hexo</title>
+  <title>可乐12138</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="可乐12138">
 <meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="og:site_name" content="可乐12138">
+<meta property="og:locale">
+<meta property="article:author" content="coke12138">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="可乐12138" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -36,7 +36,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">可乐12138</a>
       </h1>
       
     </div>
@@ -82,13 +82,22 @@
 <h2 id="3-下载Hexo"><a href="#3-下载Hexo" class="headerlink" title="3.下载Hexo"></a>3.下载Hexo</h2><p>命令：cnpm install -g hexo-cli<br>回车，命令行跑一段。<br>验证，查看hexo -v   这里是4.2.0<br>同时也可以看到系统和其余组件版本。</p>
 <h2 id="4-新建文件夹！"><a href="#4-新建文件夹！" class="headerlink" title="4.新建文件夹！"></a>4.新建文件夹！</h2><p>没错，为博客在本地的文件建立一个新文件夹。<br>cmd进入此文件夹操作。</p>
 <h2 id="5-hexo初始化"><a href="#5-hexo初始化" class="headerlink" title="5.hexo初始化"></a>5.hexo初始化</h2><p>命令：hexo init<br>(十分钟后）</p>
-<h2 id="6-启动博客"><a href="#6-启动博客" class="headerlink" title="6.启动博客"></a>6.启动博客</h2><p>hexo s<br>localhost:4000 可访问预览博客</p>
+<h2 id="6-启动博客"><a href="#6-启动博客" class="headerlink" title="6.启动博客"></a>6.启动博客</h2><p>hexo s<br>localhost:4000 可访问预览博客<br>ctrl + C 中断</p>
 <h2 id="7-写文章"><a href="#7-写文章" class="headerlink" title="7.写文章"></a>7.写文章</h2><p>文章存储路径：.\source_posts<br>markdown格式保存<br>用一个本文编辑器以markdown格式写一篇文章放进去即可。</p>
+<p>在刚才的新建文件夹下执行命令：<br>hexo clean 清理<br>hexo g 生成<br>hexo s 再次启动查看</p>
+<h2 id="8-在GitHub上创建仓库"><a href="#8-在GitHub上创建仓库" class="headerlink" title="8.在GitHub上创建仓库"></a>8.在GitHub上创建仓库</h2><p>(你必须先有GitHub账号)<br>新仓库名称格式：GitHub昵称.github.io<br>公共仓库</p>
+<h2 id="9-在新文件夹中安装git"><a href="#9-在新文件夹中安装git" class="headerlink" title="9.在新文件夹中安装git"></a>9.在新文件夹中安装git</h2><p>在刚才的新建文件夹下执行命令：<br>cnpm install –save hexo-deployer-git</p>
+<h2 id="10-设置-config-yml文件"><a href="#10-设置-config-yml文件" class="headerlink" title="10.设置 _config.yml文件"></a>10.设置 _config.yml文件</h2><p>编辑文件内容：<br>在末尾的</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: </span><br></pre></td></tr></table></figure>
+<p>改成：（冒号后有空格,字符用单引号括起来,仅windows）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: <span class="string">&#x27;git&#x27;</span></span><br><span class="line">  rope: <span class="string">&#x27;你的GitHub仓库地址&#x27;</span></span><br><span class="line">branch: <span class="string">&#x27;master&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="11-部署到远端"><a href="#11-部署到远端" class="headerlink" title="11.部署到远端"></a>11.部署到远端</h2><p>在刚才的新建文件夹下执行命令：hexo d<br>验证：可以通过仓库地址“XXX.github.io”访问博客。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/10/09/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2--1/" data-id="ckg2f69m1000138uza5tc2os1" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/10/09/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2--1/" data-id="ckg2gsdag0001qkuz6pp51bq5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -137,7 +146,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/10/09/hello-world/" data-id="ckg2f69lv000038uz9ccv9nfj" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/10/09/hello-world/" data-id="ckg2gsda50000qkuz3e1aew4s" class="article-share-link">Share</a>
       
       
     </footer>
@@ -197,7 +206,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2020 John Doe<br>
+      &copy; 2020 coke12138<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
