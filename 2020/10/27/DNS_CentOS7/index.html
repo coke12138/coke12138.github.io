@@ -7,11 +7,15 @@
   
   <title>可乐12138</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="DNS配置流程全流程 在Centos7上主DNS服务器，不带chroot1.    ifconfig 查看IP（固定IP），并把DNS指向自己vim &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-ens33 （不用改了！）修改保存退出。2.检查软件安装yum -y install bind3.配置主配置文件vim &#x2F;etc&#x2F;named.conf修改两个any：optio">
+<meta property="og:type" content="article">
 <meta property="og:title" content="可乐12138">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/2020/10/27/DNS_CentOS7/index.html">
 <meta property="og:site_name" content="可乐12138">
+<meta property="og:description" content="DNS配置流程全流程 在Centos7上主DNS服务器，不带chroot1.    ifconfig 查看IP（固定IP），并把DNS指向自己vim &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-ens33 （不用改了！）修改保存退出。2.检查软件安装yum -y install bind3.配置主配置文件vim &#x2F;etc&#x2F;named.conf修改两个any：optio">
 <meta property="og:locale">
+<meta property="article:published_time" content="2020-10-27T12:06:59.063Z">
+<meta property="article:modified_time" content="2020-10-27T12:29:35.792Z">
 <meta property="article:author" content="coke12138">
 <meta name="twitter:card" content="summary">
   
@@ -62,9 +66,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-DNS_CentOS7" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-DNS_CentOS7" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/27/DNS_CentOS7/" class="article-date">
   <time datetime="2020-10-27T12:06:59.063Z" itemprop="datePublished">2020-10-27</time>
@@ -117,103 +119,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-搭建个人博客--1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/09/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2--1/" class="article-date">
-  <time datetime="2020-10-09T15:41:09.589Z" itemprop="datePublished">2020-10-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="搭建个人博客-1"><a href="#搭建个人博客-1" class="headerlink" title="搭建个人博客-1"></a>搭建个人博客-1</h2><p>(在win10上–静态博客–Hexo–GitHub)</p>
-<h2 id="1-安装node-js"><a href="#1-安装node-js" class="headerlink" title="1.安装node.js"></a>1.安装node.js</h2><p>官方：<a target="_blank" rel="noopener" href="https://nodejs.org/en/">https://nodejs.org/en/</a><br>腾讯软件（版本不是最新的哦！）（选普通下载！）： <a target="_blank" rel="noopener" href="https://pc.qq.com/search.html#!keyword=node">https://pc.qq.com/search.html#!keyword=node</a><br>安装就一直下一步，有一个地方的勾选我选上了。<br>验证，cmd下成功查看node -v 和 npm -v 。<br>我此时的版本node v12.18.4，npm 6.14.6。</p>
-<h2 id="2-用npm在淘宝源下载cnpm（特色）"><a href="#2-用npm在淘宝源下载cnpm（特色）" class="headerlink" title="2.用npm在淘宝源下载cnpm（特色）"></a>2.用npm在淘宝源下载cnpm（特色）</h2><p>命令： npm install -g cnpm –registry=<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a> （希望没敲错）<br>成功的话在命令行将看到进度条和显示一系列的自动操作。我用了二十多秒。<br>验证，查看cnpm版本：6.1.1<br><del>(这一步据说可以用yarn完成）</del> </p>
-<h2 id="3-下载Hexo"><a href="#3-下载Hexo" class="headerlink" title="3.下载Hexo"></a>3.下载Hexo</h2><p>命令：cnpm install -g hexo-cli<br>回车，命令行跑一段。<br>验证，查看hexo -v   这里是4.2.0<br>同时也可以看到系统和其余组件版本。</p>
-<h2 id="4-新建文件夹！"><a href="#4-新建文件夹！" class="headerlink" title="4.新建文件夹！"></a>4.新建文件夹！</h2><p>没错，为博客在本地的文件建立一个新文件夹。<br>cmd进入此文件夹操作。</p>
-<h2 id="5-hexo初始化"><a href="#5-hexo初始化" class="headerlink" title="5.hexo初始化"></a>5.hexo初始化</h2><p>命令：hexo init<br>(十分钟后）</p>
-<h2 id="6-启动博客"><a href="#6-启动博客" class="headerlink" title="6.启动博客"></a>6.启动博客</h2><p>hexo s<br>localhost:4000 可访问预览博客<br>ctrl + C 中断</p>
-<h2 id="7-写文章"><a href="#7-写文章" class="headerlink" title="7.写文章"></a>7.写文章</h2><p>文章存储路径：.\source_posts<br>markdown格式保存<br>用一个本文编辑器以markdown格式写一篇文章放进去即可。</p>
-<p>在刚才的新建文件夹下执行命令：<br>hexo clean 清理<br>hexo g 生成<br>hexo s 再次启动查看</p>
-<h2 id="8-在GitHub上创建仓库"><a href="#8-在GitHub上创建仓库" class="headerlink" title="8.在GitHub上创建仓库"></a>8.在GitHub上创建仓库</h2><p>(你必须先有GitHub账号)<br>新仓库名称格式：GitHub昵称.github.io<br>公共仓库</p>
-<h2 id="9-在新文件夹中安装git"><a href="#9-在新文件夹中安装git" class="headerlink" title="9.在新文件夹中安装git"></a>9.在新文件夹中安装git</h2><p>在刚才的新建文件夹下执行命令：<br>cnpm install –save hexo-deployer-git</p>
-<h2 id="10-设置-config-yml文件"><a href="#10-设置-config-yml文件" class="headerlink" title="10.设置 _config.yml文件"></a>10.设置 _config.yml文件</h2><p>编辑文件内容：<br>在末尾的</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: </span><br></pre></td></tr></table></figure>
-<p>改成：（冒号后有空格,字符用单引号括起来,仅windows）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: <span class="string">&#x27;git&#x27;</span></span><br><span class="line">  rope: <span class="string">&#x27;你的GitHub仓库地址&#x27;</span></span><br><span class="line">branch: <span class="string">&#x27;master&#x27;</span></span><br></pre></td></tr></table></figure>
+  
+    <a href="/2020/10/09/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2--1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
 
-<h2 id="11-部署到远端"><a href="#11-部署到远端" class="headerlink" title="11.部署到远端"></a>11.部署到远端</h2><p>在刚才的新建文件夹下执行命令：hexo d<br>验证：可以通过仓库地址“XXX.github.io”访问博客。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/10/09/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2--1/" data-id="ckgrye4gk0002ssuz2zivdgm8" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/09/hello-world/" class="article-date">
-  <time datetime="2020-10-09T15:03:17.614Z" itemprop="datePublished">2020-10-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/09/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/10/09/hello-world/" data-id="ckgrye4gj0001ssuz2x9m6e80" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
