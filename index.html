@@ -86,7 +86,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="DNS配置流程"><a href="#DNS配置流程" class="headerlink" title="DNS配置流程"></a>DNS配置流程</h1><h2 id="全流程"><a href="#全流程" class="headerlink" title="全流程"></a>全流程</h2><hr>
+        <h2 id="全流程"><a href="#全流程" class="headerlink" title="全流程"></a>全流程</h2><hr>
 <p>在Centos7上<br>主DNS服务器，不带chroot<br>1.    ifconfig 查看IP（固定IP），并把DNS指向自己<br>vim /etc/sysconfig/network-scripts/ifcfg-ens33 （不用改了！）<br>修改保存退出。<br>2.检查软件安装<br>yum -y install bind<br>3.配置主配置文件<br>vim /etc/named.conf<br>修改两个any：<br>options {<br>        listen-on port 53 { 127.0.0.1; };<br>        allow-query     { localhost; };<br> };<br>把127.0.0.1和localhost都改成any，其余不动。<br>保存退出。<br>4.新增正反向区<br>vim /etc/named.rfc1912.zones<br>新增正向和反向解析区</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">zone <span class="string">&quot;jnrplinux.com&quot;</span> IN &#123;</span><br><span class="line">	<span class="built_in">type</span> master;</span><br><span class="line">	file <span class="string">&quot;jnrplinux.zone&quot;</span>;</span><br><span class="line">	allow-transfer &#123; any; &#125;;  	//允许被查询，没有从服务器可以不加</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">zone <span class="string">&quot;118.168.192.in-addr.arpa&quot;</span> IN &#123;</span><br><span class="line">	<span class="built_in">type</span> master;</span><br><span class="line">	file <span class="string">&quot;jnrplinux.rev.zone&quot;</span>;</span><br><span class="line">	allow-transfer &#123; any; &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
@@ -121,7 +121,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/10/27/DNS_CentOS7/" data-id="ckgryyudm00002guz6ua41n2g" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/10/27/DNS_CentOS7/" data-id="ckgrz1ap30000twuzax67hnf6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -174,7 +174,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/10/09/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2--1/" data-id="ckgryyudr00012guzdoacekqb" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/10/09/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2--1/" data-id="ckgrz1aph0002twuz0cqw4fyl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -223,7 +223,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/10/09/hello-world/" data-id="ckgryyuds00022guz4wrx1g3q" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/10/09/hello-world/" data-id="ckgrz1ap80001twuz6b3ddqgx" class="article-share-link">Share</a>
       
       
     </footer>
