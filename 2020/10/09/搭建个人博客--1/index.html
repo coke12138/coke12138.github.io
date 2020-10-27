@@ -5,17 +5,17 @@
   
 
   
-  <title>可乐12138</title>
+  <title>DNS配置流程搭建个人博客 | 可乐12138</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title:搭建个人博客 搭建个人博客-1(在win10上–静态博客–Hexo–GitHub) 1.安装node.js官方：https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;腾讯软件（版本不是最新的哦！）（选普通下载！）： https:&#x2F;&#x2F;pc.qq.com&#x2F;search.html#!keyword&#x3D;node安装就一直下一步，有一个地方的勾选我选上了。验证，cmd下成功查看node -v 和 npm -">
+  <meta name="description" content="搭建个人博客-1(在win10上–静态博客–Hexo–GitHub) 1.安装node.js官方：https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;腾讯软件（版本不是最新的哦！）（选普通下载！）： https:&#x2F;&#x2F;pc.qq.com&#x2F;search.html#!keyword&#x3D;node安装就一直下一步，有一个地方的勾选我选上了。验证，cmd下成功查看node -v 和 npm -v 。我此时的版本node">
 <meta property="og:type" content="article">
-<meta property="og:title" content="可乐12138">
+<meta property="og:title" content="DNS配置流程搭建个人博客">
 <meta property="og:url" content="http://example.com/2020/10/09/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2--1/index.html">
 <meta property="og:site_name" content="可乐12138">
-<meta property="og:description" content="title:搭建个人博客 搭建个人博客-1(在win10上–静态博客–Hexo–GitHub) 1.安装node.js官方：https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;腾讯软件（版本不是最新的哦！）（选普通下载！）： https:&#x2F;&#x2F;pc.qq.com&#x2F;search.html#!keyword&#x3D;node安装就一直下一步，有一个地方的勾选我选上了。验证，cmd下成功查看node -v 和 npm -">
+<meta property="og:description" content="搭建个人博客-1(在win10上–静态博客–Hexo–GitHub) 1.安装node.js官方：https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;腾讯软件（版本不是最新的哦！）（选普通下载！）： https:&#x2F;&#x2F;pc.qq.com&#x2F;search.html#!keyword&#x3D;node安装就一直下一步，有一个地方的勾选我选上了。验证，cmd下成功查看node -v 和 npm -v 。我此时的版本node">
 <meta property="og:locale">
 <meta property="article:published_time" content="2020-10-09T15:41:09.589Z">
-<meta property="article:modified_time" content="2020-10-27T12:40:19.734Z">
+<meta property="article:modified_time" content="2020-10-27T12:46:54.828Z">
 <meta property="article:author" content="coke12138">
 <meta name="twitter:card" content="summary">
   
@@ -76,10 +76,19 @@
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      DNS配置流程搭建个人博客
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <p>title:搭建个人博客</p>
-<h2 id="搭建个人博客-1"><a href="#搭建个人博客-1" class="headerlink" title="搭建个人博客-1"></a>搭建个人博客-1</h2><p>(在win10上–静态博客–Hexo–GitHub)</p>
+        <h2 id="搭建个人博客-1"><a href="#搭建个人博客-1" class="headerlink" title="搭建个人博客-1"></a>搭建个人博客-1</h2><p>(在win10上–静态博客–Hexo–GitHub)</p>
 <h2 id="1-安装node-js"><a href="#1-安装node-js" class="headerlink" title="1.安装node.js"></a>1.安装node.js</h2><p>官方：<a target="_blank" rel="noopener" href="https://nodejs.org/en/">https://nodejs.org/en/</a><br>腾讯软件（版本不是最新的哦！）（选普通下载！）： <a target="_blank" rel="noopener" href="https://pc.qq.com/search.html#!keyword=node">https://pc.qq.com/search.html#!keyword=node</a><br>安装就一直下一步，有一个地方的勾选我选上了。<br>验证，cmd下成功查看node -v 和 npm -v 。<br>我此时的版本node v12.18.4，npm 6.14.6。</p>
 <h2 id="2-用npm在淘宝源下载cnpm（特色）"><a href="#2-用npm在淘宝源下载cnpm（特色）" class="headerlink" title="2.用npm在淘宝源下载cnpm（特色）"></a>2.用npm在淘宝源下载cnpm（特色）</h2><p>命令： npm install -g cnpm –registry=<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a> （希望没敲错）<br>成功的话在命令行将看到进度条和显示一系列的自动操作。我用了二十多秒。<br>验证，查看cnpm版本：6.1.1<br><del>(这一步据说可以用yarn完成）</del> </p>
 <h2 id="3-下载Hexo"><a href="#3-下载Hexo" class="headerlink" title="3.下载Hexo"></a>3.下载Hexo</h2><p>命令：cnpm install -g hexo-cli<br>回车，命令行跑一段。<br>验证，查看hexo -v   这里是4.2.0<br>同时也可以看到系统和其余组件版本。</p>
@@ -100,7 +109,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/10/09/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2--1/" data-id="ckgrykt380002ncuz374l15be" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/10/09/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2--1/" data-id="ckgryswf80001f8uz2tbwd0kn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -113,7 +122,7 @@
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          (no title)
+          DNS配置流程
         
       </div>
     </a>
@@ -158,11 +167,11 @@
       <ul>
         
           <li>
-            <a href="/2020/10/27/DNS_CentOS7/">(no title)</a>
+            <a href="/2020/10/27/DNS_CentOS7/">DNS配置流程</a>
           </li>
         
           <li>
-            <a href="/2020/10/09/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2--1/">(no title)</a>
+            <a href="/2020/10/09/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2--1/">DNS配置流程搭建个人博客</a>
           </li>
         
           <li>
